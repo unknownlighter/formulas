@@ -34,4 +34,6 @@ django.syncdb:
     - settings_module: {{ pillar['settings_module'] }}
     - bin_env: {{ pillar['venv_dir'] }}
     - pythonpath: {{ pillar['work_dir'] }}
+    - require:
+        - postgres_database: djangodb
  
